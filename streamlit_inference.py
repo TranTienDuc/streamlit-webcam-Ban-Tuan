@@ -235,26 +235,24 @@ class Inference:
             # Configure WebRTC
             # Thay đổi phần cấu hình WebRTC trong phương thức inference()
             rtc_configuration = RTCConfiguration({
-                    "iceServers": [
-                        {
-                            "urls": "stun:global.stun.twilio.com:3478"
-                        },
-                        {
-                            "urls": "turn:global.turn.twilio.com:3478?transport=udp",
-                            "username": "9d4853635b24303fed5bc727b3affd45b5a7e18723896e3a483a7079b4146317",
-                            "credential": "+R3jJHFzw+LQgnxIDWjq+nx89MD4CUCMy+oDWwo63qc="
-                        },
-                        {
-                            "urls": "turn:global.turn.twilio.com:3478?transport=tcp",
-                            "username": "9d4853635b24303fed5bc727b3affd45b5a7e18723896e3a483a7079b4146317",
-                            "credential": "+R3jJHFzw+LQgnxIDWjq+nx89MD4CUCMy+oDWwo63qc="
-                        },
-                        {
-                            "urls": "turn:global.turn.twilio.com:443?transport=tcp",
-                            "username": "9d4853635b24303fed5bc727b3affd45b5a7e18723896e3a483a7079b4146317",
-                            "credential": "+R3jJHFzw+LQgnxIDWjq+nx89MD4CUCMy+oDWwo63qc="
-                        }
-                    ]
+                "iceServers": [{"urls": ["stun:stun.relay.metered.ca:80"]},
+                                   {"urls": ["turn:asia.relay.metered.ca:80"],
+                                    "username": "5f056e7d0dc59e50e3deeaa6",
+                                    "credential": "ktMeHfTxMPOhP6v+",
+                                   },
+                                   {"urls": ["turn:asia.relay.metered.ca:80?transport=tcp"],
+                                    "username": "5f056e7d0dc59e50e3deeaa6",
+                                    "credential": "ktMeHfTxMPOhP6v+",
+                                   },
+                                   {"urls": ["turn:asia.relay.metered.ca:443"],
+                                    "username": "5f056e7d0dc59e50e3deeaa6",
+                                    "credential": "ktMeHfTxMPOhP6v+",
+                                   },
+                                   {"urls": ["turns:asia.relay.metered.ca:443?transport=tcp"],
+                                    "username": "5f056e7d0dc59e50e3deeaa6",
+                                    "credential": "ktMeHfTxMPOhP6v+",
+                                   },
+                                   ]
                 }
             )
             
