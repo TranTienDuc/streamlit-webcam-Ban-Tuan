@@ -235,24 +235,6 @@ class Inference:
             # Configure WebRTC
             # Thay đổi phần cấu hình WebRTC trong phương thức inference()
             rtc_configuration = RTCConfiguration({
-                "iceServers": [{"urls": ["stun:stun.relay.metered.ca:80"]},
-                                   {"urls": ["turn:asia.relay.metered.ca:80"],
-                                    "username": "5f056e7d0dc59e50e3deeaa6",
-                                    "credential": "ktMeHfTxMPOhP6v+",
-                                   },
-                                   {"urls": ["turn:asia.relay.metered.ca:80?transport=tcp"],
-                                    "username": "5f056e7d0dc59e50e3deeaa6",
-                                    "credential": "ktMeHfTxMPOhP6v+",
-                                   },
-                                   {"urls": ["turn:asia.relay.metered.ca:443"],
-                                    "username": "5f056e7d0dc59e50e3deeaa6",
-                                    "credential": "ktMeHfTxMPOhP6v+",
-                                   },
-                                   {"urls": ["turns:asia.relay.metered.ca:443?transport=tcp"],
-                                    "username": "5f056e7d0dc59e50e3deeaa6",
-                                    "credential": "ktMeHfTxMPOhP6v+",
-                                   },
-                                   ]
                 }
             )
             
